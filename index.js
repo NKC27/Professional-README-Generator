@@ -9,6 +9,8 @@ const fs = require('fs');
         type: 'input',
         message: 'What is the title to your document',
         name: 'title',
+        // Validation to check that a value has been added
+        validate: (value) => { if(value){return true}else{return 'Please enter a value'}},
     },
 
     {
