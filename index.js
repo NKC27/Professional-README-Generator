@@ -7,7 +7,7 @@ const fs = require('fs');
    inquirer.prompt ([
     {
         type: 'input',
-        message: 'What is the title to your document',
+        message: 'What is the title to your repository?',
         name: 'title',
         // Validation to check that a value has been added
         validate: (value) => { if(value){return true}else{return 'Please enter a value'}},
@@ -44,13 +44,20 @@ const fs = require('fs');
 
     {
         type: 'input',
+        message: 'Were there any contributions made?',
+        name: 'licence',
+        choices: ['MIT licence', 'The GPL licence', 'Apache licence', 'GNU licence', 'GVL-GPL licence', 'N/A',],
+        validate: (value) => { if(value){return true}else{return 'Please enter a value'}},
+    },
+
+    {
+        type: 'input',
         message: 'What is your GitHub username?',
         name: 'username',
         validate: (value) => { if(value){return true}else{return 'Please enter a value'}},
     },
 
     {
-
         type: 'input',
         message: 'what is your LinkedIn?',
         name: 'LinkedIn',
@@ -58,12 +65,17 @@ const fs = require('fs');
     },
 
     {
-
         type: 'input',
         message: 'what is yourx email address?',
         name: 'Email',
         validate: (value) => { if(value){return true}else{return 'Please enter a value'}},
     }
-]).then(responses => {
-    const html = buildHTML(responses)
-})
+]).then(inputData => {
+    fs.writeFile('README.md', JSON.stringify(inputData, null, 2, (err)=>{
+        if(err) {
+            console.error(err)
+        } else {
+            console.log('Thank you')
+        }
+    }))
+}) 
