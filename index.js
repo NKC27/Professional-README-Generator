@@ -15,32 +15,54 @@ const fs = require('fs');
 
     {
         type: 'input',
-        message: 'What is your name?',
-        name: 'name',
+        message: 'What the app is for?',
+        name: 'app_Description',
+        validate: (value) => { if(value){return true}else{return 'Please enter a value'}},
     },
 
     {
         type: 'input',
-        message: 'where do you live?',
-        name: 'location',
+        message: 'Why did you build this project?',
+        name: 'why_Description',
+        validate: (value) => { if(value){return true}else{return 'Please enter a value'}},
     },
 
     {
         type: 'input',
-        message: 'what is your email address?',
-        name: 'email',
+        message: 'What problem does it solve?',
+        name: 'prob_Description',
+        validate: (value) => { if(value){return true}else{return 'Please enter a value'}},
+    },
+
+    {
+        type: 'list',
+        message: 'what licences did you use?',
+        name: 'licence',
+        choices: ['MIT licence', 'The GPL licence', 'Apache licence', 'GNU licence', 'Other', 'N/A',],
+        validate: (value) => { if(value){return true}else{return 'Please enter a value'}},
     },
 
     {
         type: 'input',
-        message: 'what is your GitHub username?',
-        name: 'GitHub',
+        message: 'What is your GitHub username?',
+        name: 'username',
+        validate: (value) => { if(value){return true}else{return 'Please enter a value'}},
     },
+
     {
 
         type: 'input',
         message: 'what is your LinkedIn?',
         name: 'LinkedIn',
+        validate: (value) => { if(value){return true}else{return 'Please enter a value'}},
+    },
+
+    {
+
+        type: 'input',
+        message: 'what is yourx email address?',
+        name: 'Email',
+        validate: (value) => { if(value){return true}else{return 'Please enter a value'}},
     }
 ]).then(responses => {
     const html = buildHTML(responses)
