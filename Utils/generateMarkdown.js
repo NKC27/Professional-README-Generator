@@ -21,10 +21,14 @@ function generateMarkdown(data) {
 
 This project is licenced under:
 
-![Github licence](https://img.shields.io/badge/license-${data.license}-blue.svg)
+![Github licence](https://img.shields.io/badge/license-${data.License}-blue.svg)
+
+
       
 ## GitHub Username
   ${data.Username}
+
+
 
 # Table of Contents
    
@@ -40,34 +44,49 @@ This project is licenced under:
 - [Contribution]
 - [Questions]
 
+
+
 # Profile Link
 
 Please see my profile for further documentation.
 [GitHub Link](${data.Profile_link})
 
+
+
 # Description
 
 ${data.App_Description}
 
+
+
 # Usage
 
 ${data.Usage}
+
+
 
 # Video of my app working
 
 Please see below a walkthrough of my app.
 
 ![Video walk through](${data.Video_link})
+[![YouTube Walk Through Link](https://img.youtube.com/vi/Zdj_-s2Hi1U/0.jpg)](https://www.youtube.com/watch?v=Zdj_-s2Hi1U)
+
+
 
 # Screenshot
 
 Please see screenshots of the app working.
 
-![ScreenShot Of my app](${data.Screenshot})
+![ScreenShot Of my app]((assets/image/Screenshot 2022-02-26 at 16.33.29.png))
+
+
 
 # Why The app was built & my motivation
 
 ${data.Why_Description}
+
+
 
 # Installation
 
@@ -79,17 +98,25 @@ Please follow the instructions on how to use the app.
 
 ${data.Instructions}
 
+
+
+
 # Licence
 
 This project has the following license:
 
 ${data.License}
 
+
+
+
 # Contributors
 
 ${data.Contribution}
 
-# Questions:
+
+
+## Questions:
 If you have any questions contact me on [GitHub](https:github.com/${data.Username}) or contact 
 ${data.Profile_link} at ${data.Email}
 `;
