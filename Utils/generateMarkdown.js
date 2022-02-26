@@ -78,7 +78,7 @@ Please see below a walkthrough of my app.
 
 Please see screenshots of the app working.
 
-![ScreenShot Of my app]((assets/image/Screenshot 2022-02-26 at 16.33.29.png))
+![ScreenShot Of my app](assets/image/Screenshot 2022-02-26 at 16.33.29.png)
 
 
 
