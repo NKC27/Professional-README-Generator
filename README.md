@@ -58,7 +58,7 @@ I built this app to create high quality README files. My motivation was to help 
 
 Please follow the instructions to install the correct dependencies and how to run the app.
 
-1. <mark> Clone the app from the repository</mark>. 2. Then you will need to <mark> install the inquirer module</mark> via: <mark> npm i inquirer. </mark>
+1. <mark> Clone the app from the repository </mark>. 2. Then you will need to <mark> install the inquirer module </mark> via: <mark> npm i inquirer. </mark>
 
 Please follow the instructions on how to use the app.
 
