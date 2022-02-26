@@ -32,17 +32,17 @@ This project is licenced under:
 
 # Table of Contents
    
-- [Profile_link]
-- [App_Description]
-- [Usage]
-- [Video_link]
-- [Screenshot]
-- [Why_Description]
-- [Installation]
-- [Instructions]
-- [License]
-- [Contribution]
-- [Questions]
+- [Profile_link](#Profile_link)
+- [App_Description](#App_Description)
+- [Usage](#Usage)
+- [Video_link](#Video_link)
+- [Screenshot](#Screenshot)
+- [Why_Description](#Why_Description)
+- [Installation](#Installation)
+- [Instructions](#Instructions)
+- [License](#License)
+- [Contribution](#Contribution)
+- [Questions](#Questions)
 
 
 
