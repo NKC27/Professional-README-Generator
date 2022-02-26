@@ -2,11 +2,10 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
-const generateMDFile = require("./Utils/generateMDFile");
+const generateMarkdown = require("./Utils/generateMarkdown.js");
     
 
 function writeToFile(fileName, data) {
-  
   fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
 
@@ -22,6 +21,18 @@ function init() {
     },
 
     {
+        type: 'list',
+        message: 'what licenses did you use?',
+        name: 'License',
+        choices: [
+            'MIT', 
+        'Other', 
+        'N/A',
+    ],
+        validate: (value) => { if(value){return true}else{return 'Please enter a value'}},
+    },
+
+    {
         type: 'input',
         message: 'What is your GitHub username?',
         name: 'Username',
@@ -32,6 +43,13 @@ function init() {
         type: 'input',
         message: 'Can you provide a link to your profile?',
         name: 'Profile_link',
+        validate: (value) => { if(value){return true}else{return 'Please enter a value'}},
+    },
+
+    {
+        type: 'input',
+        message: 'What languages were used to create your app? what was the usage?',
+        name: 'Usage',
         validate: (value) => { if(value){return true}else{return 'Please enter a value'}},
     },
 
@@ -79,30 +97,7 @@ function init() {
 
     {
         type: 'input',
-        message: 'Can you provide a file path to a 2nd screenshot of the app working?',
-        name: 'Screenshot2',
-        validate: (value) => { if(value){return true}else{return 'Please enter a value'}},
-    },
-
-    {
-        type: 'input',
-        message: 'Can you provide a file path to a 3rd screenshot of the app working?',
-        name: 'Screenshot3',
-        validate: (value) => { if(value){return true}else{return 'Please enter a value'}},
-    },
-
-
-    {
-        type: 'list',
-        message: 'what licences did you use?',
-        name: 'Licence',
-        choices: ['MIT licence', 'The GPL licence', 'Apache licence', 'GNU licence', 'Other', 'N/A',],
-        validate: (value) => { if(value){return true}else{return 'Please enter a value'}},
-    },
-
-    {
-        type: 'input',
-        message: 'Is the project open to contributions made from third parties?',
+        message: 'Is the project open to contributions?',
         name: 'Contribution',
         validate: (value) => { if(value){return true}else{return 'Please enter a value'}},
     },
@@ -119,11 +114,12 @@ function init() {
         message: 'what is your email address?',
         name: 'Email',
         validate: (value) => { if(value){return true}else{return 'Please enter a value'}},
-        }
+        },
+        
         
     ]).then(function(data) {   
-      console.log("Generating Markdown File...");   
-      writeToFile("README.md", generateMDFile({...data}));  
+      console.log(" File Generated! Thank You! ");   
+      writeToFile("README.md", generateMarkdown({...data}));  
 });
 }
 init()
